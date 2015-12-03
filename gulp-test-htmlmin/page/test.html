@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--声明文档使用的字符编码-->
+    <meta charset="UTF-8">
+    <!--    其中的属性说明如下：
+    默认是all
+        设定为all：文件将被检索，且页面上的链接可以被查询；
+        设定为none：文件将不被检索，且页面上的链接不可以被查询；
+        设定为index：文件将被检索；
+        设定为follow：页面上的链接可以被查询；
+        设定为noindex：文件将不被检索，但页面上的链接可以被查询；
+        设定为nofollow：文件将不被检索，页面上的链接可以被查询。-->
+    <meta name="Robots" contect="all|none|index|noindex|follow|nofollow">
+    <!--revisit-after (重访) -->
+    <META name="revisit-after" CONTENT="7 days" >
+    <!--编辑器的说明 -->
+    <Meta name="Generator" Content="PCDATA|FrontPage|">
+    <!--H5页面窗口自动调整到设备宽度，并禁止用户缩放页面-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!--页面描述-->
+    <meta name="description" content="不超过150个字符" />
+    <!--页面关键词-->
+    <meta name="keywords" content="html5, css3, 关键字"/>
+    <!--定义网页作者-->
+    <meta name="author" content="张艳兵" />
+    <!--日期-->
+    <meta name="build" content="2015.5.20">
+    <meta name="coprright" content="版权">
+    <!--当网站添加到主屏幕快速启动方式，可隐藏地址栏，仅针对ios的safari；是否启用 WebApp 全屏模式-->
+    <meta  name="apple-mobile-web-app-capable" content="yes">
+    <!--将网站添加到主屏幕快速启动方式，仅针对ios的safari顶端状态条的,样式可选default、black、black-translucent -->
+    <meta name="apple-mobile-web-app-status-bar-style"  content="black">
+    <!--忽略将页面中的数字识别为电话号码-->
+    <meta name="format-detection" content="telephone=no" >
+    <!--忽略Android平台中对邮箱地址的识别-->
+    <meta name="format-detection" content="email=no">
+    <meta content="no-cache" http-equiv="Cache-Control">
+    <!--
+        iOS 图标
+        apple-touch-icon-precomposed 禁止系统自动添加效果，直接显示设计原图。
+    -->
+    <!--iPhone 和 iTouch，默认 57x57 像素，必须有-->
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57x57-precomposed.png" />
+    <!--iPad，72x72 像素，可以没有，但推荐有-->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png" />
+    <!--Retina iPhone 和 Retina iTouch，114x114 像素，可以没有，但推荐有-->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png" />
+    <!--Retina iPad，144x144 像素，可以没有，但推荐有-->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144-precomposed.png" />
+    <!--
+        iOS 启动画面
+    -->
+    <!--iPad 的启动画面是不包括状态栏区域的。-->
+    <!--iPad 竖屏 768 x 1004（标准分辨率）-->
+    <link rel="apple-touch-startup-image" sizes="768x1004" href="/splash-screen-768x1004.png" />
+    <!--iPad 竖屏 1536x2008（Retina）-->
+    <link rel="apple-touch-startup-image" sizes="1536x2008" href="/splash-screen-1536x2008.png" />
+    <!--iPad 横屏 1024x748（标准分辨率）-->
+    <link rel="apple-touch-startup-image" sizes="1024x748" href="/Default-Portrait-1024x748.png" />
+    <!--iPad 横屏 2048x1496（Retina）-->
+    <link rel="apple-touch-startup-image" sizes="2048x1496" href="/splash-screen-2048x1496.png" />
+    <!--iPhone 和 iPod touch 的启动画面是包含状态栏区域的。-->
+    <!--iPhone/iPod Touch 竖屏 320x480 (标准分辨率)-->
+    <link rel="apple-touch-startup-image" href="/splash-screen-320x480.png" />
+    <!--iPhone/iPod Touch 竖屏 640x960 (Retina)-->
+    <link rel="apple-touch-startup-image" sizes="640x960" href="/splash-screen-640x960.png" />
+    <!--iPhone 5/iPod Touch 5 竖屏 640x1136 (Retina)-->
+    <link rel="apple-touch-startup-image" sizes="640x1136" href="/splash-screen-640x1136.png" />
+    <!--
+        Windows 8
+    -->
+    <!--Windows 8 磁贴颜色-->
+    <meta name="msapplication-TileColor" content="#000"/>
+    <!--Windows 8 磁贴图标-->
+    <meta name="msapplication-TileImage" content="icon.png"/>
+    <!--winphone系统a、input标签被点击时产生的半透明灰色背景怎么去掉-->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!--添加 RSS 订阅-->
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
+    <!--添加 favicon icon-->
+    <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+    <title>HTML5基础页面</title>
+    <style>
+        body{font-family:Helvetica;}
+        /*rem配置参考：*/
+        html {font-size:10px}
+
+        @media screen and (min-width:480px) and (max-width:639px) {
+            html {
+                font-size: 15px
+            }
+        }
+
+        @media screen and (min-width:640px) and (max-width:719px) {
+            html {
+                font-size: 20px
+            }
+        }
+
+        @media screen and (min-width:720px) and (max-width:749px) {
+            html {
+                font-size: 22.5px
+            }
+        }
+
+        @media screen and (min-width:750px) and (max-width:799px) {
+            html {
+                font-size: 23.5px
+            }
+        }
+
+        @media screen and (min-width:800px) and (max-width:959px) {
+            html {
+                font-size: 25px
+            }
+        }
+
+        @media screen and (min-width:960px) and (max-width:1079px) {
+            html {
+                font-size: 30px
+            }
+        }
+
+        @media screen and (min-width:1080px) {
+            html {
+                font-size: 32px
+            }
+        }
+        .main{
+            width: 90%;
+            height: auto;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <h2>基础知识</h2>
+    <h4>meta基础知识</h4>
+    <ul>
+        <li>H5页面窗口自动调整到设备宽度，并禁止用户缩放页面
+            <p>
+                &lt;meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" /&gt;
+            </p>
+        </li>
+        <li>忽略将页面中的数字识别为电话号码
+            <p>
+                &lt;meta name="format-detection" content="telephone=no" /&gt;
+            </p></li>
+        <li>忽略Android平台中对邮箱地址的识别
+            <p>
+                &lt;meta name="format-detection" content="email=no" /&gt;
+            </p></li>
+        <li>当网站添加到主屏幕快速启动方式，可隐藏地址栏，仅针对ios的safari:注：ios7.0版本以后，safari上已看不到效果
+            <p>
+                &lt;meta name="apple-mobile-web-app-capable" content="yes" /&gt;
+            </p></li>
+        <li>将网站添加到主屏幕快速启动方式，仅针对ios的safari顶端状态条的样式.注：可选default、black、black-translucent
+            <p>
+                &lt;meta name="apple-mobile-web-app-status-bar-style" content="black" /&gt;
+            </p></li>
+    </ul>
+    <h4>常见问题</h4>
+    <ul>
+        <li>
+            <p>移动端如何定义字体font-family</p>
+            <ul>
+                <li>中文字体使用系统默认即可，英文用Helvetica
+                    <p>body{font-family:Helvetica;}</p></li>
+            </ul>
+        </li>
+
+        <li>
+            <p>移动端字体单位font-size选择px还是rem</p>
+            <ul>
+                <li>对于只需要适配手机设备，使用px即可</li>
+            </ul>
+        </li>
+
+        <li>
+            <p>移动端touch事件</p>
+            <p>当用户手指放在移动设备在屏幕上滑动会触发的touch事件</p>
+            <p>以下支持webkit</p>
+            <ul>
+                <li>touchstart——当手指触碰屏幕时候发生。不管当前有多少只手指</li>
+                <li>touchmove——当手指在屏幕上滑动时连续触发。通常我们再滑屏页面，会调用event的preventDefault()可以阻止默认情况的发生：阻止页面滚动</li>
+                <li>touchend——当手指离开屏幕时触发</li>
+                <li>touchcancel——系统停止跟踪触摸时候会触发。例如在触摸过程中突然页面alert()一个提示框，此时会触发该事件，这个事件比较少用</li>
+            </ul>
+            <p>以下支持winphone 8</p>
+            <ul>
+                <li>MSPointerDown——当手指触碰屏幕时候发生。不管当前有多少只手指</li>
+                <li>MSPointerMove——当手指在屏幕上滑动时连续触发。通常我们再滑屏页面，会调用css的html{-ms-touch-action: none;}可以阻止默认情况的发生：阻止页面滚动</li>
+                <li>MSPointerUp——当手指离开屏幕时触发</li>
+            </ul>
+        </li>
+        <li>
+            <p>移动端click屏幕产生200-300 ms的延迟响应</p>
+            <p>移动设备上的web网页是有300ms延迟的，往往会造成按钮点击延迟甚至是点击失效。</p>
+            <p>2007年苹果发布首款iphone上IOS系统搭载的safari为了将适用于PC端上大屏幕的网页能比较好的展示在手机端上，
+                使用了双击缩放(double tap to zoom)的方案，比如你在手机上用浏览器打开一个PC上的网页，你可能在看到页面内容虽然可以撑满整个屏幕，
+                但是字体、图片都很小看不清，此时可以快速双击屏幕上的某一部分，你就能看清该部分放大后的内容，再次双击后能回到原始状态。</p>
+            <p>双击缩放是指用手指在屏幕上快速点击两次，iOS 自带的 Safari 浏览器会将网页缩放至原始比例。</p>
+            <p>原因就出在浏览器需要如何判断快速点击上，当用户在屏幕上单击某一个元素时候，例如跳转链接&lt;a href="#"&gt;&lt;/a&gt;，此处浏览器会先捕获该次单击，
+                但浏览器不能决定用户是单纯要点击链接还是要双击该部分区域进行缩放操作，
+                所以，捕获第一次单击后，浏览器会先Hold一段时间t，如果在t时间区间里用户未进行下一次点击，则浏览器会做单击跳转链接的处理，
+                如果t时间里用户进行了第二次单击操作，则浏览器会禁止跳转，转而进行对该部分区域页面的缩放操作。
+                那么这个时间区间t有多少呢？在IOS safari下，大概为300毫秒。
+                这就是延迟的由来。造成的后果用户纯粹单击页面，页面需要过一段时间才响应，给用户慢体验感觉，
+                对于web开发者来说是，页面js捕获click事件的回调函数处理，需要300ms后才生效，也就间接导致影响其他业务逻辑的处理。</p>
+            <ul>
+                <li>fastclick可以解决在手机上点击事件的300ms延迟</li>
+                <li>zepto的touch模块，tap事件也是为了解决在click的延迟问题</li>
+            </ul>
+        </li>
+        <li>
+            <p>触摸事件的响应顺序</p>
+            <ul>
+                <li>ontouchstart </li>
+                <li>ontouchmove </li>
+                <li>ontouchend </li>
+                <li>onclick</li>
+            </ul>
+        </li>
+        <li>
+            <p>什么是Retina 显示屏，带来了什么问题</p>
+            <p>retina：一种具备超高像素密度的液晶屏，同样大小的屏幕上显示的像素点由1个变为多个，如在同样带下的屏幕上，苹果设备的retina显示屏中，像素点1个变为4个</p>
+            <p>在高清显示屏中的位图被放大，图片会变得模糊，因此移动端的视觉稿通常会设计为传统PC的2倍</p>
+            <p>设计稿切出来的图片长宽保证为偶数，并使用backgroud-size把图片缩小为原来的1/2</p>
+            <p>例如图片宽高为：200px*200px，那么写法如下</p>
+            <p>.css{width:100px;height:100px;background-size:100px 100px;}其它元素的取值为原来的1/2，例如视觉稿40px的字体，使用样式的写法为20px</p>
+
+            .css{font-size:20px}
+        </li>
+        <li>
+            <p>ios系统中元素被触摸时产生的半透明灰色遮罩怎么去掉</p>
+            <p>ios用户点击一个链接，会出现一个半透明灰色遮罩, 如果想要禁用，可设置-webkit-tap-highlight-color的alpha值为0，也就是属性值的最后一位设置为0就可以去除半透明灰色遮罩</p>
+            <p>a,button,input,textarea{-webkit-tap-highlight-color: rgba(0,0,0,0;)}</p>
+        </li>
+        <li>
+            <p>部分android系统中元素被点击时产生的边框怎么去掉</p>
+            <p>android用户点击一个链接，会出现一个边框或者半透明灰色遮罩, 不同生产商定义出来额效果不一样，可设置-webkit-tap-highlight-color的alpha值为0去除部分机器自带的效果</p>
+            <p>a,button,input,textarea{
+                -webkit-tap-highlight-color: rgba(0,0,0,0;)
+                -webkit-user-modify:read-write-plaintext-only;
+                }</p>
+        </li>
+        <li>winphone系统a、input标签被点击时产生的半透明灰色背景怎么去掉
+            <p>&lt;meta name="msapplication-tap-highlight" content="no"&gt;</p></li>
+        <li>webkit表单元素的默认外观怎么重置
+            <p>.css{-webkit-appearance:none;}</p></li>
+        <li>webkit表单输入框placeholder的颜色值能改变么<p>input::-webkit-input-placeholder{color:#AAAAAA;}
+            input:focus::-webkit-input-placeholder{color:#EEEEEE;}</p></li>
+        <li>webkit表单输入框placeholder的文字能换行么
+            <p>ios可以，android不行~,在textarea标签下都可以换行~</p></li>
+        <li>IE10（winphone8）表单元素默认外观如何重置
+            <h4>禁用 select 默认下拉箭头</h4>
+            <p>::-ms-expand 适用于表单选择控件下拉箭头的修改，有多个属性值，设置它隐藏 (display:none) 并使用背景图片来修饰可得到我们想要的效果。</p>
+            <p>select::-ms-expand {
+                display: none;
+                }</p>
+            <h4>禁用 radio 和 checkbox 默认样式</h4>
+            <p>::-ms-check 适用于表单复选框或单选按钮默认图标的修改，同样有多个属性值，设置它隐藏 (display:none) 并使用背景图片来修饰可得到我们想要的效果。</p>
+            <p>input[type=radio]::-ms-check,input[type=checkbox]::-ms-check{
+                display: none;
+                }</p>
+            <h4>禁用PC端表单输入框默认清除按钮</h4>
+            <p>当表单文本输入框输入内容后会显示文本清除按钮，::-ms-clear 适用于该清除按钮的修改，同样设置使它隐藏(display:none) 并使用背景图片来修饰可得到我们想要的效果。</p>
+            《怕》input[type=text]::-ms-clear,input[type=tel]::-ms-clear,input[type=number]::-ms-clear{
+            display: none;
+            }
+        </li>
+        <li>禁止ios 长按时不触发系统的菜单，禁止ios&android长按时下载图片<p>.css{-webkit-touch-callout: none}</p></li>
+        <li>禁止ios和android用户选中文字<p>.css{-webkit-user-select:none}</p></li>
+        <li>打电话发短信的怎么实现<p><a href="tel:18601343755">打电话给:18601343755</a></p><p>发短信，winphone系统无效</p><p><a href="sms:10086">发短信给: 10086</a></p></li>
+        <li>模拟按钮hover效果
+            <p>移动端触摸按钮的效果，可明示用户有些事情正要发生，是一个比较好体验，但是移动设备中并没有鼠标指针，使用css的hover并不能满足我们的需求，还好国外有个激活css的active效果，<a href="example/hover.html">示例</a></p>
+            <p>上面示例兼容性ios5+、部分android 4+、winphone 8</p>
+            <p>要做到全兼容的办法，可通过绑定ontouchstart和ontouchend来控制按钮的类名<a href="example/hover2.html">演示</a></p>
+        </li>
+        <li>屏幕旋转的事件和样式
+            <p>事件</p>
+            <p>window.orientation，取值：正负90表示横屏模式、0和180表现为竖屏模式；</p>
+            <p>
+                window.onorientationchange = function(){
+                switch(window.orientation){
+                case -90:
+                case 90:
+                alert("横屏:" + window.orientation);
+                case 0:
+                case 180:
+                alert("竖屏:" + window.orientation);
+                break;
+                }
+                }
+            </p>
+            <p>样式</p>
+            <p>//竖屏时使用的样式
+                @media all and (orientation:portrait) {
+                .css{}
+                }
+
+                //横屏时使用的样式
+                @media all and (orientation:landscape) {
+                .css{}
+                }</p>
+        </li>
+        <li>audio元素和video元素在ios和andriod中无法自动播放
+            <p>触屏即播</p>
+            $(‘html‘).one(‘touchstart‘,function(){
+            audio.play()
+            })
+        </li>
+        <li>摇一摇功能<p>HTML5 deviceMotion：封装了运动传感器数据的事件，可以获取手机运动状态下的运动加速度等数据。</p></li>
+        <a href="h5-deviceMotion/deviceMotion.html">演示</a>
+        <li>手机拍照和上传图片
+            <p>input type="file"的accept 属性</p>
+            选择照片
+            &lt;input type=file accept="image/*"&gt;
+            &lt;选择视频&gt;
+            &lt;input type=file accept="video/*"&gt;
+            <ul>
+                <li>ios 有拍照、录像、选取本地图片功能</li>
+                <li>部分android只有选取本地图片功能</li>
+                <li>winphone不支持</li>
+                <li>input控件默认外观丑陋</li>
+            </ul>
+        </li>
+        <li>微信浏览器用户调整字体大小后页面矬了，怎么阻止用户调整
+            <p>原因</p>
+            <p>anroid侧是复写了layoutinflater 对textview做了统一处理</p>
+            <p>ios侧是修改了body.style.webkitTextSizeAdjust值</p>
+            <h4>普通解决方案：</h4>
+            <p>android暂无方案</p>
+            <p>ios使用-webkit-text-size-adjust禁止调整字体大小</p>
+            <p>body{-webkit-text-size-adjust: 100%!important;}</p>
+            <p>最好的解决方案：</p>
+            <p>整个页面用rem或者百分比布局</p>
+
+        </li>
+        <li>消除transition闪屏
+            <p>.css{
+                /*设置内嵌的元素在 3D 空间如何呈现：保留 3D*/
+                -webkit-transform-style: preserve-3d;
+                /*（设置进行转换的元素的背面在面对用户时是否可见：隐藏）*/
+                -webkit-backface-visibility: hidden;
+                }</p>
+        </li>
+        <li>开启硬件加速
+            <p>.css {
+                -webkit-transform: translate3d(0, 0, 0);
+                -moz-transform: translate3d(0, 0, 0);
+                -ms-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+                }</p>
+        </li>
+        <li>取消input在ios下，输入的时候英文首字母的默认大写<p><input autocapitalize="off" autocorrect="off" /></p></li>
+        <li>android上去掉语音输入按钮<p>input::-webkit-input-speech-button {display: none}</p></li>
+        <li>android 2.3 bug
+            <p>@-webkit-keyframes 需要以100%结束</p>
+            <p>after和before伪类无法使用动画</p>
+            <p>android 2.3 自带浏览器不支持%</p>
+        </li>
+        <li>android 4.x border-radiu bug
+            <p>三星 Galaxy S4中自带浏览器不支持border-radius缩写</p>
+            <p>同时设置border-radius和背景色的时候，背景色会溢出到圆角以外部分</p>
+        </li>
+        <li>设计高性能CSS3动画的几个要素
+            <p>尽可能地使用合成属性transform和opacity来设计CSS3动画，不使用position的left和top来定位</p>
+            <p>利用translate3D开启GPU加速</p>
+        </li>
+        <li>fixed bug
+            <p>ios下fixed元素容易定位出错，软键盘弹出时，影响fixed元素定位</p>
+            <p>android下fixed表现要比iOS更好，软键盘弹出时，不会影响fixed元素定位</p>
+            <p>ios4下不支持position:fixed</p>
+        </li>
+    </ul>
+    <h4>常用的移动端框架</h4>
+    <ul>
+        <li>zepto.js</li>
+        <li>iscroll.js</li>
+        <li>underscore.js</li>
+        <li>滑屏框架
+            <ul>
+                <li>slip.js</li>
+                <li>iSlide.js</li>
+                <li>fullpage.js</li>
+            </ul>
+        </li>
+        <li>flex布局
+            <p>flex：定义布局为盒模型
+                flex-v：盒模型垂直布局
+                flex-1：子元素占据剩余的空间
+                flex-align-center：子元素垂直居中
+                flex-pack-center：子元素水平居中
+                flex-pack-justify：子元素两端对齐
+                兼容性：ios 4+、android 2.3+、winphone8+</p>
+            <p><a href="example/flex1.html">两端对齐</a></p>
+            <p>使用注意：flex下的子元素必须为块级元素，非块级元素在android2.3机器下flex失效</p>
+        </li>
+        <li>FastClick<p>消除在移动浏览器上触发click事件与一个物理Tap(敲击)之间的300延迟</p></li>
+    </ul>
+
+</div>
+</body>
+</html>
