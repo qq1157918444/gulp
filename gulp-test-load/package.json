@@ -1,0 +1,11 @@
+{
+  "dependencies":{
+    "gulp-jshint":"*",
+    "gulp-concat":"*",
+    "gulp-rename":"*",
+    "gulp-uglify":"*",
+    "gulp-livereload":"*",
+    "gulp-clean":"*",
+    "gulp-notify":"*"
+  }
+}
