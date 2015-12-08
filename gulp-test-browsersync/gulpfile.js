@@ -10,6 +10,7 @@ var gulp = require("gulp"),//基础库
     clean = require("gulp-clean"),
     notify = require("gulp-notify"),
     cache = require("gulp-cache"),
+    browsersync = require("browser-sync"),
     livereload = require("gulp-livereload");
 
 /*源文件目录*/
@@ -23,6 +24,7 @@ var src = {
 /*处理后的文件目录*/
 var dest = {
     root:"./dest/**",
+    browserroot:"./dest",
     html:"./dest/page/",
     css:"./dest/static/css",
     img:"./dest/static/img/",
@@ -99,17 +101,14 @@ gulp.task("watch",function(){
     var server = livereload();
     gulp.watch([dest.root]).on("change",function(file){
         //server.changed(file.path);
-        console.log(file);
         server.changed;
     });
-    gulp.watch([dest.root]).on("added",function(file){
-        //server.changed(file.path);
-        console.log(file)
-        server.added;
-    });
-    gulp.watch([dest.root]).on("deleted",function(file){
-        //server.changed(file.path);
-        console.log(file)
-        server.deleted;
-    });
+});
+
+gulp.task("browser-sync",function(){
+    browsersync.init([src.html,src.css,src.js,src.img],{
+        server:{
+            baseDir:dest.browserroot
+        }
+    })
 });

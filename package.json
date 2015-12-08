@@ -1,11 +1,20 @@
 {
-  "dependencies":{
-    "gulp-jshint":"*",
-    "gulp-concat":"*",
-    "gulp-rename":"*",
-    "gulp-uglify":"*",
-    "gulp-livereload":"*",
-    "gulp-clean":"*",
-    "gulp-notify":"*"
+  "author": "frank",
+  "date": "2015.12.03",
+  "version": "v1.0.0",
+  "description": "gulp learn",
+  "dependencies": {
+    "gulp-jshint": "*",
+    "gulp-concat": "*",
+    "gulp-rename": "*",
+    "gulp-uglify": "*",
+    "gulp-livereload": "*",
+    "gulp-clean": "*",
+    "gulp-notify": "*"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.10.0",
+    "gulp-rev": "^6.0.1",
+    "gulp-rev-collector": "^1.0.2"
   }
 }
